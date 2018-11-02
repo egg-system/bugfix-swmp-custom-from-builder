@@ -72,7 +72,7 @@
 
 			foreach ($notify_emails_array as $to_email){
 				$to_email = trim($to_email);
-				wp_mail($to_email, $subject, nl2br($admin_notify_body), $headers);
+				wp_mail($to_email, $subject, $admin_notify_body, $headers);
 				if(method_exists("SwpmLog", "log_simple_debug")){
 					SwpmLog::log_simple_debug('Form builder addon - admin notification email sent to: '.$to_email, true);
 				}
