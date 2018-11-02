@@ -36,7 +36,7 @@
 		//Add the raw custom fields data to the email (if the merge tag is present).
 		$custom_fields_arr = $this->custom;
 		foreach ($custom_fields_arr as $field_id => $field_value) {
-			$body = str_replace("{\{$field_id\}}", $field_value, $body);
+			$body = str_replace("{{$field_id}}", $field_value, $body);
 		}
 		
 		//Send the member notification email.
@@ -67,7 +67,7 @@
 			}
 			$admin_notify_body = SwpmMiscUtils::replace_dynamic_tags($admin_notify_body, $member_id);//Do the standard merge var replacement.
 			foreach ($custom_fields_arr as $field_id => $field_value) {
-				$admin_notify_body = str_replace("{\{$field_id\}}", $field_value, $body);
+				$admin_notify_body = str_replace("{{$field_id}}", $field_value, $body);
 			}
 
 			foreach ($notify_emails_array as $to_email){
