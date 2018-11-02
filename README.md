@@ -12,4 +12,4 @@
 ## 使用方法
 - `swpm-form-builder/classes/class.swpm-fb-form-builder`のsend_reg_emailがメール送信処理のロジックになります
 - 本リポジトリの`class.swpm-fb-form-builder.send_reg_email.php`の内容を、上記メソッドに上書きしてください
-### 上書き前に上記ファイルのバックアップを取ってください！
+### 上書き前にバックアップを取ってください！
